@@ -1,0 +1,313 @@
+body{
+    padding: 0 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+}
+/*barra-de-navegacion*/
+.container-barra{
+    top: -8px;
+    height: 50px;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #c4c3c3;
+}
+.container-barra a{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    background: #fff;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: #00c3ff;
+    margin: 10px;
+    font-weight: 800;
+    font-size: 20px;
+}
+.container-barra a:hover{
+    background: #f7f7f7;
+    color: #03aee2;
+}
+.container-barra a:active{
+   color: #000;
+}
+
+/*titulo*/
+.titulo-resposive{
+    display: none;
+}
+.titulo p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-size: 25px;
+    color: #00b0c0;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.titulo span{
+    color: #000;
+}
+/*sumuray*/
+.container-summary{
+    display: inline-block;
+    width: 90px;
+    height: 14px;
+}
+.container-barra details{
+    color: #00b0c0;
+    position: absolute; 
+}
+
+.container-barra .accesorios{
+    display: block;
+    position: relative;
+    background: none;
+    color: #fffdfd;
+    font-weight: 700;
+    border: 1px solid;
+    margin-top: 30px;
+    margin-left: -40px;
+    backdrop-filter:blur(5px);
+    filter: grayscale(100%);
+    background: #0000004f;
+}
+.container-barra .accesorios:hover{
+    border-bottom: 1px solid;
+}
+.container-barra-responsive{
+    display: none;
+}
+.responsivo img{
+    display: none;
+}
+/*Portada*/
+.portada{
+    display: flex;
+    justify-content: center;
+}
+.portada img{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+/*sub titulo los mas vendido*/
+.container-lo-mas-vendido{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 20px;
+}
+#sub-title{
+    font-family: cursive;
+    justify-content: center;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+    border-bottom: 1px solid rgb(212, 212, 212);
+    border-radius: 50px;
+}
+
+/*-----card-----*/
+.card{
+    border-radius: 10px;
+    padding: 15px;
+    padding-top: 180px;
+    background: linear-gradient(#00b0c0,#0d6f7d);
+    width: 280px;
+    height: 400px;
+    text-align: center;
+    align-items: flex-start;
+    transition: .5s;
+    cursor: default;
+}
+.card button{
+    background: #6af5e971;
+    border: 2px solid #177774;
+    color: #e4e2e2;
+    width: 60px;
+    height: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card:hover {
+    background-color: #bbbbbb5e;
+    box-shadow: 10px 10px 23px -11px rgba(0, 0, 0, 0.69);
+    -webkit-box-shadow: 10px 10px 23px -11px rgba(0, 0, 0, 0.69);
+    -moz-box-shadow: 10px 10px 23px -11px rgba(0, 0, 0, 0.69);
+    filter: saturate(137%);
+    -webkit-filter: saturate(137%);
+    -moz-filter: saturate(137%);
+    transform: translateY(-3%);
+  }
+
+
+.card img{
+    width: 80%;
+    text-align: center;
+}
+.card p {
+    font-weight: 700;
+    color: #5bfff4;
+}
+
+.card p b{
+    color: #333d49;
+    border-bottom: 2px solid;
+    display: inline;
+    margin-right: 30px;
+}
+.precio {
+    display: inline;
+}
+
+  /*---------------RESPOSIVE---------------*/
+@media screen and (max-width: 800px) {
+    body{
+      padding:0  5px;
+      margin-top: 10%;
+    }
+    .portada img{
+        width: 100%;
+    }
+    .container-barra{
+        display: none;
+    }
+    /*-----barra responsive-----*/
+    .container-barra-responsive{
+        position: fixed;
+        top: 0;
+        display: flex;
+        justify-content: center;
+        height: 550px;
+        width: 350px;
+        backdrop-filter:blur(5px);
+        background: #000000a6;
+        transform: translateY(-110%);
+        transition: all 1s;
+        z-index: 20;
+        border-top-right-radius:25px;
+        border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+    .container-barra-responsive ul{
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+    }
+    .container-barra-responsive a{
+        text-decoration: none;
+        margin-top: 40px;
+        font-weight: 900;
+        color: #fff;
+        border-bottom: solid 1px ;
+ 
+    }
+    .container-barra-responsive img{
+        display: inline-block;
+        margin-right: 10px;
+    }
+    .responsivo:hover > .container-barra-responsive{
+        transform: translateY(2%);
+        transition: all 1s;
+
+    }
+    .container-barra-responsive .seccion_de-accesorios{
+        display: none;
+    }
+    .social-icons{
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+    }
+    .social-icons a{
+        margin: 10px;
+        padding: 0;
+        border: none;
+    }
+    .social-icons img{
+        margin: 0;
+        width: 25px;
+    }
+    .terminos-y-condiciones-garantia-politicas{
+        font-size: 14px;
+    }
+    .terminos-y-condiciones-garantia-politicas a{
+        text-decoration: none;
+        font-weight: 100;
+        border-bottom: 1px solid;
+        display: inline;
+        color: #ffffff57;
+    }
+    /*fondo de l abarra de navegacion,titulo*/
+    .fondo-de-la-barra-de-navegacion{
+        width: 100%;
+        height: 50px;
+        margin-left: -12px;
+        background: #ffffff;
+        position: fixed;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 0 10px #ffffff;
+        border-bottom: 2px solid #c4c3c3;
+    }
+    .fondo-de-la-barra-de-navegacion{
+        display: block;
+    }
+    .fondo-de-la-barra-de-navegacion p{
+        color: #00b0c0;
+        float: right;
+        font-weight: 700;
+        margin-right: 10px;
+        font-size: 20px;
+    }
+    .fondo-de-la-barra-de-navegacion span{
+        color: #000;
+    }
+
+    .responsivo #bars{
+        display: flex;
+        width: 30px;
+        margin-top: 10px;
+        position: fixed;
+        top: 0;
+        margin-left: 10px;
+        z-index: 20;
+        float: right;
+    }
+
+    
+}
+
+.social-icons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.social-icons img{
+    margin: 0 10px;
+    width: 30px;
+}
+.terminos-y-condiciones-garantia-politicas{
+    flex-wrap: wrap;
+    font-size: 14px;
+}
+.terminos-y-condiciones-garantia-politicas a{
+    font-size: 17px;
+    font-weight: 100;
+    display: inline;
+    color: #ffffff57;
+}
+footer{
+    margin-top: 20px;
+    background: #333;
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+} 
+
